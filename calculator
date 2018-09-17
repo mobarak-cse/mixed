@@ -82,8 +82,7 @@ public class Felatactionber extends AppCompatActivity {
                 View.OnClickListener listener = new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        // If the current state is Error do not append the operator
-                        // If the last input is number only, append the operator
+                        
                         if (lastNumeric && !stateError) {
                             Button button = (Button) v;
                             txtScreen.append(button.getText());
@@ -128,8 +127,7 @@ public class Felatactionber extends AppCompatActivity {
             }
 
             private void onEqual() {
-                // If the current state is error, nothing to do.
-                // If the last input is a number only, solution can be found.
+               
                 if (lastNumeric && !stateError) {
                     // Read the expression
                     String txt = txtScreen.getText().toString();
